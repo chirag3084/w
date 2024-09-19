@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Vowel Positions</title>
+    <script>
+        function findVowelPositions() {
+            // Get the input word from the text field
+            var word = document.getElementById("inputWord").value;
+
+            // Initialize positions for the first and last occurrences
+            var firstPosition = word.indexOf("a");
+            var lastPosition = word.lastIndexOf("a");
+
+            // Check if 'a' was found in the word
+            if (firstPosition === -1) {
+                alert("The letter 'a' is not found in the word.");
+                return;
+            }
+
+            // Get the substring between the first and last occurrences of 'a'
+            var substring = word.slice(firstPosition + 1, lastPosition);
+
+            // Display the results
+            alert("First occurrence of 'a': Position " + (firstPosition + 1) + 
+                  "\nLast occurrence of 'a': Position " + (lastPosition + 1) + 
+                  "\nString between them: '" + substring + "'");
+        }
+    </script>
+</head>
+<body>
+    <h1>Find Positions of Vowel 'a'</h1>
+    <form action="javascript:void(0);">
+        <label for="inputWord">Enter a word:</label>
+        <input type="text" id="inputWord" required>
+        <input type="button" value="Find" onclick="findVowelPositions()">
+    </form>
+</body>
+</html>
