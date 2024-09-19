@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mm = Number(prompt('Tell me your month of birthday (1-12)?' , ''));
+        mm=mm-1;
+        var dd = Number(prompt('Tell me your day of birthday(1-31)?',''));
+        var d2 = new Date();
+        var bday = new Date();
+        var yy = bday.getFullYear();
+        bday.setDate(dd);
+        bday.setMonth(mm);
+        bday.setFullYear(yy+1);
+        var result=(MATH.floor((bday.getTime() - d2)/(1000*60*60*24)))
+        if (result>=365)
+    </script>
+</body>
+</html>
