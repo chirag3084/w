@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function search(form1) {
+            var sentence = form1.input.value;
+            var pattern = prompt("Enter the word to be searched for:", "");
+            if (pattern === null || pattern === "") {
+                alert("No word entered.");
+                return;
+            }
+            var temp = sentence.split(" ");
+            var found = false; // Flag to check if the word is found
+            for (var i = 0; i < temp.length; i++) {
+                if (temp[i] === pattern) {
+                    alert("The word is at position: " + (i + 1));
+                    found = true;
+                }
+            }
+            if (!found) {
+                alert("The word was not found.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="f1">
+        <b>Enter the Sentence</b>
+        <input type="text" name="input"><br>
+        <input type="button" id="ok" onclick="search(this.form)" value="OK">
+    </form>
+</body>
+</html>
