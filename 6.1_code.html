@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function demo(f2) {
+            var a = f2.name.value;
+            var b = f2.password.value; // Use the correct ID for password
+            if (a == "cody" && b == "8238898715") {
+                alert("You are logged in");
+            } else {
+                alert("Your credentials are incorrect");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="f2" action="">
+        Enter your Name: <input type="text" name="name" required><br>
+        Enter your Password: <input type="password" name="password" required><br>
+        <input type="button" id="ok" onclick="demo(this.form)" value="OK">
+    </form>
+</body>
+</html>
