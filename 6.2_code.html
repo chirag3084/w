@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Validation Form</title>
+
+</head>
+
+<body>
+
+    <form name="form1" onsubmit="return validateForm(this);">
+
+        Enter your mobile number: <input type="tel" id="number" name="mob_number" required><br>
+
+        Enter your email ID: <input type="email" id="email" name="email" required><br>
+
+        <input type="submit" id="ok" value="Submit">
+
+    </form> 
+
+    <script>
+
+    function validateForm(f1) {
+
+        const number = f1.mob_number.value;
+
+        const email = f1.email.value;
+
+
+
+
+        // const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // const p = /^[^\s.]+.[^\s.]+\.[^\s.]+$/;
+
+        const p = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+
+
+
+        
+
+        if (!p.test(email)) {
+
+            
+
+            
+
+        
+
+
+
+
+        if (number.length === 10 && (number.charAt(0) === '9' || number.charAt(0) === '8')) {
+
+            alert("Login success...");
+
+            return true; 
+
+        } else {
+
+            alert("Please enter a valid mobile number that starts with 8 or 9 and is 10 digits long.");
+
+            return false; 
+
+        }
+
+    }
+
+    }
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
