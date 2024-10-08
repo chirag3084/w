@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    color:blue;
+}
+.c{
+    margin:200px;
+}
+</style>
+
+
+<body>
+    <html lang="en">
+  <head>
+    <title>getElementById example</title>
+  </head>
+  <body id = "body">
+    
+    <button class="c" onclick="changeColor('blue');">blue</button>
+    <button class="c" onclick="changeColor('red');">red</button>
+  </body>
+</html>
+    <script>
+        function changeColor(newColor) {
+  const elem = document.getElementById("body");
+  elem.style.backgroundColor = newColor;
+}
+    </script>
+</body>
+</html>
