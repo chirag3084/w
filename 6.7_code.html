@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Numbers</title>
+</head>
+<body>
+    <form id="fibForm" onsubmit="return false;">
+        <label for="numberInput">Enter a number:</label>
+        <input type="number" id="numberInput" min="1" required>
+        <input type="submit" value="Generate" id="submitBtn">
+    </form>
+
+    <h2>Fibonacci Numbers:</h2>
+    <ul id="fibonacciList"></ul>
+
+    <script>
+        document.getElementById('submitBtn').onclick = function() {
+            const number = parseInt(document.getElementById("numberInput").value);
+            const fibonacciList = document.getElementById("fibonacciList");
+            fibonacciList.innerHTML = ''; // Clear previous results
+            
+            let n1 = 0, n2 = 1, nextTerm;
+
+            for (let i = 1; i <= number; i++) {
+                const listItem = document.createElement('li');
+                listItem.textContent = n1;
+                fibonacciList.appendChild(listItem);
+
+                nextTerm = n1 + n2;
+                n1 = n2;
+                n2 = nextTerm;
+            }
+        }
+    </script>
+</body>
+</html>
